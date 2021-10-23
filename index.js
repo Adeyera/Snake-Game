@@ -8,7 +8,7 @@ const width = 10
 let appleIndex = 0
 let score = 0
 let intervalTime = 1000
-let speed = 1
+let speed = 0.8
 let timerId = 0
 let isGame = document.getElementById("isGame")
 function createGrid() {
@@ -40,7 +40,7 @@ function startGame() {
     //re add new score to browser
     scoreDisplay.textContent = score
     direction = 1
-    intervalTime = 800
+    intervalTime = 700
     generateApple()
     //readd the class of snake to our new currentSnake
     currentSnake.forEach(index => squares[index].classList.add('snake'))
